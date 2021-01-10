@@ -1,5 +1,7 @@
 const express=require("express");
 const dotenv=require("dotenv");
+const questions=require("./routers/question");
+const auth=require("./routers/auth");
 
 //enviroment variables
 dotenv.config({
@@ -9,9 +11,9 @@ const app=express();
 
 const PORT=process.env.PORT;
 
-app.get("/",(req,res,next)=>{
-    res.send("Hello Q-A-Response s");
-});
+app.use("/api/questions",questions);
+app.use("/api/auth",auth);
+
 
 //Run the server
 app.listen(PORT,()=>{
