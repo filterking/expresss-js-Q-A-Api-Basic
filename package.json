@@ -1,0 +1,24 @@
+{
+  "name": "question-answer-rest-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "dev":"nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "dotenv": "8.2.0"
+  },
+  "keywords": [
+    "express",
+    "restiapi"
+  ],
+  "author": "Kunter Kutlu",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
