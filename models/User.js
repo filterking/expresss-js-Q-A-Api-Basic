@@ -41,7 +41,7 @@ const UserSchema=new Schema({
     website:{
         type:String
     },
-    rofile_image:{
+    profile_image:{
         type:String,
         default:"default.jpg"
     },
