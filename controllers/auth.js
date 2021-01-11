@@ -1,5 +1,5 @@
 const User=require("../models/User");
-
+const CustomError=require("../helpers/errors/CustomError");
 const auth=(req,res,next)=>{
     res.status(200).json({success:true,mesaj:"auth controller ok"});
 };
@@ -25,7 +25,7 @@ const register = async (req,res,next)=>{
 
 
 const errorTest = (req,res,next)=>{
-    throw new Error("Hata oluştu");
+    return next(new CustomError("Custom Error Message",400));
 };
 
 module.exports={auth,register,errorTest};
